@@ -4,7 +4,7 @@ use bitcoin::secp256k1::PublicKey;
 use lightning::ln::features::{InitFeatures, NodeFeatures};
 use lightning::ln::msgs::{ChannelAnnouncement, ChannelUpdate, Init, LightningError, NodeAnnouncement, QueryChannelRange, QueryShortChannelIds, ReplyChannelRange, ReplyShortChannelIdsEnd, RoutingMessageHandler};
 use lightning::routing::gossip::{NetworkGraph, NodeId, P2PGossipSync};
-use lightning::util::events::{MessageSendEvent, MessageSendEventsProvider};
+use lightning::events::{MessageSendEvent, MessageSendEventsProvider};
 use tokio::sync::mpsc;
 use tokio::sync::mpsc::error::TrySendError;
 

@@ -280,32 +280,25 @@ checksum = "3304a64d199bb964be99741b7a14d26972741915b3649639149b2479bb46f4b5"
 
 [[package]]
 name = "lightning"
-version = "0.0.114"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "800ec68a160529ba3ca12c5db629867c4a8de2df272792c1246602966a5b789b"
+version = "0.0.115"
 dependencies = [
  "bitcoin",
+ "musig2",
 ]
 
 [[package]]
 name = "lightning-block-sync"
-version = "0.0.114"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "71a6fcb6ffc245cf0aee4a4654145a2a7e670be2d879c14b8ed456cdc4235255"
+version = "0.0.115"
 dependencies = [
  "bitcoin",
  "chunked_transfer",
- "futures-util",
  "lightning",
- "serde",
  "serde_json",
 ]
 
 [[package]]
 name = "lightning-net-tokio"
-version = "0.0.114"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "19197703db1195ed908ccd84cd76baaa5916e0d22750a2e1b7188f66516812bd"
+version = "0.0.115"
 dependencies = [
  "bitcoin",
  "lightning",
@@ -366,6 +359,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b9f1c5b025cda876f66ef43a113f91ebc9f4ccef34843000e0adf6ebbab84e21"
 dependencies = [
  "winapi",
+]
+
+[[package]]
+name = "musig2"
+version = "0.1.0"
+source = "git+https://github.com/arik-so/rust-musig2?rev=27797d7#27797d78cf64e8974e38d7f31ebb11e455015a9e"
+dependencies = [
+ "bitcoin",
 ]
 
 [[package]]
@@ -595,20 +596,6 @@ name = "serde"
 version = "1.0.147"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d193d69bae983fc11a79df82342761dfbf28a99fc8d203dca4c3c1b590948965"
-dependencies = [
- "serde_derive",
-]
-
-[[package]]
-name = "serde_derive"
-version = "1.0.147"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4f1d362ca8fc9c3e3a7484440752472d68a6caa98f1ab81d99b5dfe517cec852"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
 
 [[package]]
 name = "serde_json"
